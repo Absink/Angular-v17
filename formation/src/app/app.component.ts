@@ -22,25 +22,15 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.open = false;
-    this.msgConnexion = "Non conencté";
-    localStorage.setItem('key1', 'value1');
-    console.log(localStorage.getItem('key1'));
-    console.log(SharedService.sharedValue);
+    this.msgConnexion = "Non connecté";
   }
 
   public login(): void {
-    console.log(localStorage.getItem('key1'));
-    if (this.msgConnexion == "Non conencté")
-      this.msgConnexion = "Bienvenue";
-    else
-      this.msgConnexion = "Non conencté"
+    SharedService.isConnected = !SharedService.isConnected;
+    SharedService.isConnected ? this.msgConnexion = "Bienvenue" : this.msgConnexion = "Non connecté";
   }
 
   public switch(): void {
-    localStorage.removeItem('key1');
-    SharedService.sharedValue = "NOUVELLE VALEUR";
-    console.log(SharedService.sharedValue);
-    console.log(localStorage.getItem('key1'));
     this.open = !this.open;
   }
 }
