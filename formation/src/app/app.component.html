@@ -1,0 +1,29 @@
+<header class="fixed-top">
+</header>
+
+<main [ngClass]="{'close-aside': !open}">
+
+  <div class="shadow position-fixed">
+  </div>
+
+  <aside>
+    <div class="scroller">
+      <!-- <ng-content select="app-navbar"></ng-content> -->
+    </div>
+  </aside>
+
+  <div class="page">
+
+    <div class="contents">
+      <h1>APP DEMO</h1>
+      <button type="button" class="btn btn-info" (click)="switch()">Switch</button>
+      <!-- <ng-content select=".content"></ng-content> -->
+    </div>
+
+    <footer>
+      <ng-content select="app-footer"></ng-content>
+    </footer>
+
+  </div>
+</main>
+
