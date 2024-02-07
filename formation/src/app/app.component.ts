@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './core/components/header/header.component';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
+import { SharedService } from './shared/services/shared.service';
 
 @Component({
   selector: 'app-root',
@@ -22,9 +23,13 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.open = false;
     this.msgConnexion = "Non conencté";
+    localStorage.setItem('key1', 'value1');
+    console.log(localStorage.getItem('key1'));
+    console.log(SharedService.sharedValue);
   }
 
   public login(): void {
+    console.log(localStorage.getItem('key1'));
     if (this.msgConnexion == "Non conencté")
       this.msgConnexion = "Bienvenue";
     else
@@ -32,6 +37,10 @@ export class AppComponent implements OnInit {
   }
 
   public switch(): void {
+    localStorage.removeItem('key1');
+    SharedService.sharedValue = "NOUVELLE VALEUR";
+    console.log(SharedService.sharedValue);
+    console.log(localStorage.getItem('key1'));
     this.open = !this.open;
   }
 }
