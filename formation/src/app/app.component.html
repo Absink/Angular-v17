@@ -1,7 +1,7 @@
 <header class="fixed-top">
-  <app-icon-nav></app-icon-nav>
+  <app-icon-nav (click)="switch()"></app-icon-nav>
   <app-header></app-header>
-  <app-icon-login></app-icon-login>
+  <app-icon-login (click)="login()"></app-icon-login>
 </header>
 
 <main [ngClass]="{'close-aside': !open}">
@@ -18,8 +18,7 @@
   <div class="page">
 
     <div class="contents">
-      <h1>APP DEMO</h1>
-      <button type="button" class="btn btn-info" (click)="switch()">Switch</button>
+      <p>{{ msgConnexion }}</p>
       <!-- <ng-content select=".content"></ng-content> -->
     </div>
 
