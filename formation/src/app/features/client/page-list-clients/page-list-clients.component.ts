@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../../../shared/services/client.service';
 import { Client } from '../../../shared/models/client.model';
+import { BtnI } from '../../../shared/interfaces/btn-i';
 
 @Component({
   selector: 'app-page-list-clients',
@@ -10,8 +11,8 @@ import { Client } from '../../../shared/models/client.model';
 export class PageListClientsComponent implements OnInit {
 
   public clients: Client[] = [];
-  public headers: string [] = [
-    'ID', 'TVA', 'Etat'];
+  public headers: string [] = ['ID', 'TVA', 'Etat'];
+  public btnAdd: BtnI = { label: 'Add', route: 'add/new' };
 
   constructor(private clientService: ClientService) {} 
 
