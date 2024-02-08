@@ -5,11 +5,12 @@ import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './core/components/header/header.component';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { SharedService } from './shared/services/shared.service';
+import { FooterComponent } from './core/components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, SharedModule, HeaderComponent, NavbarComponent],
+  imports: [RouterOutlet, CommonModule, SharedModule, HeaderComponent, NavbarComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
