@@ -5,6 +5,7 @@ import { IconLoginComponent } from './components/icon-login/icon-login.component
 import { IconFooterComponent } from './components/icon-footer/icon-footer.component';
 import { TableGenericComponent } from './components/table-generic/table-generic.component';
 import { TotalPipe } from './pipes/total.pipe';
+import { DaysPipe } from './pipes/days.pipe';
 
 
 
@@ -14,16 +15,19 @@ import { TotalPipe } from './pipes/total.pipe';
     IconLoginComponent,
     IconFooterComponent,
     TableGenericComponent,
-    TotalPipe
+    TotalPipe,
+    DaysPipe
   ],
   imports: [
     CommonModule
-  ], exports: [
+  ],
+  exports: [
     IconNavComponent,
     IconLoginComponent,
     IconFooterComponent,
     TableGenericComponent,
-    TotalPipe
+    TotalPipe,
+    DaysPipe
   ]
 })
 export class SharedModule { }
