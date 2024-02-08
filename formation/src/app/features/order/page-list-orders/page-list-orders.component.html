@@ -1,4 +1,10 @@
-<p>PAGE LIST ORDERS</p>
+<app-table-generic [collection]="listOrder" [headers]="entetes">
+</app-table-generic>
+
+
+
+
+<!-- <p>PAGE LIST ORDERS</p>
 <ul *ngFor="let o of listOrder">
   <li>{{ o.id }} / {{ o.tjmHT }}</li>
 </ul>
@@ -15,7 +21,7 @@
     <div *ngSwitchCase="700">{{ o.id }} / {{ o.tjmHT }}</div>
     <div *ngSwitchDefault>Others</div>
   </div>
-</ul>
+</ul> -->
 
 
 <!-- <p>{{ listOrder | json }}</p> -->
