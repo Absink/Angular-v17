@@ -6,6 +6,7 @@ import { HeaderComponent } from './core/components/header/header.component';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { SharedService } from './shared/services/shared.service';
 import { FooterComponent } from './core/components/footer/footer.component';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,17 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.open = false;
     this.msgConnexion = "Non connecté";
+
+    /*const sub = new Subject<number>();
+    sub.subscribe((x) => {
+      console.log(x)
+    });
+
+    sub.next(1);
+    sub.next(2);
+    sub.next(70000);
+    sub.complete();*/
+
   }
 
   public login(): void {

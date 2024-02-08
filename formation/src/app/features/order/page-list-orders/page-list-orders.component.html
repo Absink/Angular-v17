@@ -1,2 +1,22 @@
 <p>PAGE LIST ORDERS</p>
-<p>{{ listOrder | json }}</p>
+<ul *ngFor="let o of listOrder">
+  <li>{{ o.id }} / {{ o.tjmHT }}</li>
+</ul>
+
+<p>PAGE LIST ORDERS (TJ > 1000)</p>
+<ul *ngFor="let o of listOrder">
+  <li *ngIf="o.tjmHT > 1000">{{ o.id }} / {{ o.tjmHT }}</li>
+</ul>
+
+<p>PAGE LIST ORDERS (TJ > 1000)</p>
+<ul *ngFor="let o of listOrder">
+  <div [ngSwitch]="o.tjmHT" headden>
+    <div *ngSwitchCase="500">{{ o.id }} / {{ o.tjmHT }}</div>
+    <div *ngSwitchCase="700">{{ o.id }} / {{ o.tjmHT }}</div>
+    <div *ngSwitchDefault>Others</div>
+  </div>
+</ul>
+
+
+<!-- <p>{{ listOrder | json }}</p> -->
+

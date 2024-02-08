@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Order } from '../models/order.model';
 import { environment } from '../../../environments/environment';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -13,7 +13,9 @@ export class OrderService {
   private api: string = environment.api;
 
   constructor(private http: HttpClient) {
-    this.collection = this.http.get<Order[]>(`${this.api}/orders`);
+    this.collection = this.http.get<Order[]>(`${this.api}/orders`).pipe(
+      map(datas => datas.map(
+        obj => new Order(obj))));
   }
 
   // Getters / Setters
@@ -24,4 +26,13 @@ export class OrderService {
   set collection(col: Observable<Order[]>) {
     this.pCollection = col;
   }
+
+
+
+  public getById(id: number): Observable<Order> {
+    return this.http.get<Order>(`${this.api}/orders/${id}`).pipe(
+      map(x => new Order(x)));
+
+  }
+
 }
