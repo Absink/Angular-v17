@@ -10,6 +10,8 @@ import { Client } from '../../../shared/models/client.model';
 export class PageListClientsComponent implements OnInit {
 
   public clients: Client[] = [];
+  public headers: string [] = [
+    'ID', 'TVA', 'Etat'];
 
   constructor(private clientService: ClientService) {} 
 

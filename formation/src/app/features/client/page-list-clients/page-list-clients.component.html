@@ -1,2 +1,5 @@
 <p>page-list-clients works!</p>
-<p>{{ clients[0].name }}</p>
+<p>{{ clients | json }}</p>
+
+
+<app-table-generic [headers]="headers"></app-table-generic>

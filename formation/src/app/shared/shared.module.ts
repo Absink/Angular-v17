@@ -4,6 +4,7 @@ import { IconNavComponent } from './components/icon-nav/icon-nav.component';
 import { IconLoginComponent } from './components/icon-login/icon-login.component';
 import { IconFooterComponent } from './components/icon-footer/icon-footer.component';
 import { TableGenericComponent } from './components/table-generic/table-generic.component';
+import { TotalPipe } from './pipes/total.pipe';
 
 
 
@@ -12,7 +13,8 @@ import { TableGenericComponent } from './components/table-generic/table-generic.
     IconNavComponent,
     IconLoginComponent,
     IconFooterComponent,
-    TableGenericComponent
+    TableGenericComponent,
+    TotalPipe
   ],
   imports: [
     CommonModule
@@ -20,7 +22,8 @@ import { TableGenericComponent } from './components/table-generic/table-generic.
     IconNavComponent,
     IconLoginComponent,
     IconFooterComponent,
-    TableGenericComponent
+    TableGenericComponent,
+    TotalPipe
   ]
 })
 export class SharedModule { }
