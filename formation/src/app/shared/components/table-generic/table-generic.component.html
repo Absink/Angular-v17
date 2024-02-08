@@ -5,15 +5,6 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let c of collection">
-      <td>{{ c.id }}</td>
-      <td>{{ c.client }}</td>
-      <td [appColorDays]="c.nbJours">{{ c | days }}</td>
-      <td>{{ c.tjmHT | currency: 'EUR'  }}</td>
-      <td>{{ c | total | currency: 'EUR' }}</td>
-      <td>{{ c | total: 'TTC' | currency: 'EUR' }}</td>
-      <td>{{ c.date | date:'dd/MM/yyy' }}</td>
-      <td [appColorState]="c.state">{{ c .state }}</td>
-    </tr>
+    <ng-content></ng-content>
   </tbody>
 </table>

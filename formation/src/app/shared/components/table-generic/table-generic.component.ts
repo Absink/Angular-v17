@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Order } from '../../models/order.model';
 
 @Component({
   selector: 'app-table-generic',
@@ -8,7 +7,6 @@ import { Order } from '../../models/order.model';
 })
 export class TableGenericComponent {
 
-  @Input() collection!: Order[];
   @Input() headers!: string[];
 
 }

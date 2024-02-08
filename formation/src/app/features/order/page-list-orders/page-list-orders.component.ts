@@ -7,8 +7,6 @@ import { BtnI } from '../../../shared/interfaces/btn-i';
 
 @Component({
   selector: 'app-page-list-orders',
-  standalone: true,
-  imports: [CommonModule, SharedModule],
   templateUrl: './page-list-orders.component.html',
   styleUrl: './page-list-orders.component.scss'
 })

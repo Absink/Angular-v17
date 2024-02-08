@@ -3,8 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-details-order',
-  standalone: true,
-  imports: [],
   templateUrl: './page-details-order.component.html',
   styleUrl: './page-details-order.component.scss'
 })
