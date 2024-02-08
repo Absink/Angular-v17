@@ -7,6 +7,7 @@ import { TableGenericComponent } from './components/table-generic/table-generic.
 import { TotalPipe } from './pipes/total.pipe';
 import { DaysPipe } from './pipes/days.pipe';
 import { ColorStateDirective } from './directives/color-state.directive';
+import { ColorDaysDirective } from './directives/color-days.directive';
 
 
 
@@ -18,7 +19,8 @@ import { ColorStateDirective } from './directives/color-state.directive';
     TableGenericComponent,
     TotalPipe,
     DaysPipe,
-    ColorStateDirective
+    ColorStateDirective,
+    ColorDaysDirective
   ],
   imports: [
     CommonModule
