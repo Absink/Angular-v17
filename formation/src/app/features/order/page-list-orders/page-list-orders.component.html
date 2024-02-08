@@ -1,28 +1,6 @@
 <app-table-generic [collection]="listOrder" [headers]="entetes">
 </app-table-generic>
 
-
-
-
-<!-- <p>PAGE LIST ORDERS</p>
-<ul *ngFor="let o of listOrder">
-  <li>{{ o.id }} / {{ o.tjmHT }}</li>
-</ul>
-
-<p>PAGE LIST ORDERS (TJ > 1000)</p>
-<ul *ngFor="let o of listOrder">
-  <li *ngIf="o.tjmHT > 1000">{{ o.id }} / {{ o.tjmHT }}</li>
-</ul>
-
-<p>PAGE LIST ORDERS (TJ > 1000)</p>
-<ul *ngFor="let o of listOrder">
-  <div [ngSwitch]="o.tjmHT" headden>
-    <div *ngSwitchCase="500">{{ o.id }} / {{ o.tjmHT }}</div>
-    <div *ngSwitchCase="700">{{ o.id }} / {{ o.tjmHT }}</div>
-    <div *ngSwitchDefault>Others</div>
-  </div>
-</ul> -->
-
-
-<!-- <p>{{ listOrder | json }}</p> -->
-
+<app-btn [btn]="btnRoute"></app-btn>
+<app-btn [btn]="btnHref"></app-btn>
+<app-btn [btn]="btnAction" (clicked)="openConsole()" ></app-btn>
