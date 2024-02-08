@@ -4,8 +4,6 @@ import { Client } from '../../../shared/models/client.model';
 
 @Component({
   selector: 'app-page-list-clients',
-  standalone: true,
-  imports: [],
   templateUrl: './page-list-clients.component.html',
   styleUrl: './page-list-clients.component.scss'
 })

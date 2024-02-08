@@ -1,4 +1,11 @@
-<p>Detail d'un client</p>
-<p>Client récupéré: {{ idClient }} </p>
+<div *ngIf="client">
+  <div>ID: {{ client.id }}</div>
+  <div>Nom: {{ client.name }}</div>
+  <div>Etat: {{ client.state }}</div>
+</div>
+
+<div *ngIf="!client">
+  <p>Problème, client non récupéré !</p>
+</div>
 
 <button type="button" class="btn btn-primary" (click)="redirect()">Listings</button>
