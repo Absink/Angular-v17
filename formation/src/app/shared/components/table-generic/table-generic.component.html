@@ -13,7 +13,7 @@
       <td>{{ c | total | currency: 'EUR' }}</td>
       <td>{{ c | total: 'TTC' | currency: 'EUR' }}</td>
       <td>{{ c.date | date:'dd/MM/yyy' }}</td>
-      <td>{{ c .state }}
+      <td [appColorState]="c .state">{{ c .state }}</td>
     </tr>
   </tbody>
 </table>

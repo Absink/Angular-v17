@@ -6,6 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DaysPipe implements PipeTransform {
 
   transform(value: any): string | null {
+    console.log(value.nbJours)
     if (value) {
       if (value.nbJours > 1)
         return value.nbJours + ' jours'
