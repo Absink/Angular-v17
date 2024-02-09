@@ -6,16 +6,23 @@ import { SharedModule } from '../../shared/shared.module';
 import { PageListOrdersComponent } from './page-list-orders/page-list-orders.component';
 import { PageDetailsOrderComponent } from './page-details-order/page-details-order.component';
 import { PageAddOrderComponent } from './page-add-order/page-add-order.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PageAddOrderBisComponent } from './page-add-order-bis/page-add-order-bis.component';
 
 
 @NgModule({
-  declarations: [PageListOrdersComponent, PageDetailsOrderComponent, PageAddOrderComponent],
+  declarations: [
+    PageListOrdersComponent,
+    PageDetailsOrderComponent,
+    PageAddOrderComponent,
+    PageAddOrderBisComponent
+  ],
   imports: [
     CommonModule,
     SharedModule,
     OrderRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class OrderModule { }

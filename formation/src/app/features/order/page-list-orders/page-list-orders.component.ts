@@ -14,7 +14,8 @@ export class PageListOrdersComponent implements OnInit {
   public entetes: string [] = [
     'ID', 'Client', 'Jours', 'TJM', 'HT', 'TTC', 'Date', 'Etat'];
 
-  public btnRoute: BtnI = { label: 'Add order', route: 'add/new' };
+  public btnRoute: BtnI = { label: 'Add V1', route: 'add/new' };
+  public btnRoute2: BtnI = { label: 'Add V2', route: 'add/new2' };
   public btnHref: BtnI = { label: 'Go Ecosia', href: 'https://www.ecosia.org' };
   public btnAction: BtnI = { label: 'Open console', action: true, color: 'blue' };
 
