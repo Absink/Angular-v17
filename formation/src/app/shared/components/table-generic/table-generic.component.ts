@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 export class TableGenericComponent {
 
   @Input() headers!: string[];
+  @Input() colorHeaders: string = 'basic';
 
 }

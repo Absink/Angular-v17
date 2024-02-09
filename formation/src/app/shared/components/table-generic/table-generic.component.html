@@ -1,7 +1,12 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th *ngFor="let h of headers">{{ h }}</th>
+      <th *ngFor="let h of headers" [ngClass]=" {
+        'color1': colorHeaders == 'basic',
+        'color2': colorHeaders == 'red',
+        'color3': colorHeaders == 'green',
+      }">
+        {{ h }}</th>
     </tr>
   </thead>
   <tbody>
