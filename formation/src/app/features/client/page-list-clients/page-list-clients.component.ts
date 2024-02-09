@@ -13,8 +13,9 @@ export class PageListClientsComponent implements OnInit {
 
   public clients: Client[] = [];
   public headers: string [] = ['ID', 'Name', 'CA', 'Etat'];
-  public btnAdd: BtnI = { label: 'Add', route: 'add/new' };
+  public btnAdd: BtnI = { label: 'Add', route: 'edit/new' };
   public btnFilter: BtnI = { label: 'Filter', action: true };
+  public btnEdit1: BtnI = { label: 'Edit1', route: 'edit/1' };
   public state: StateClient | undefined;
 
   constructor(private clientService: ClientService) { } 

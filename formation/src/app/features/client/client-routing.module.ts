@@ -7,7 +7,8 @@ import { PageAddClientComponent } from './page-add-client/page-add-client.compon
 const routes: Routes = [
   { path: '', component: PageListClientsComponent },
   { path: ':id', component: PageDetailsClientComponent },
-  { path: 'add/new', component: PageAddClientComponent }
+  { path: 'edit/new', component: PageAddClientComponent },
+  { path: 'edit/:id', component: PageAddClientComponent }
 ];
 
 @NgModule({

@@ -6,6 +6,7 @@ import { PageDetailsClientComponent } from './page-details-client/page-details-c
 import { PageListClientsComponent } from './page-list-clients/page-list-clients.component';
 import { SharedModule } from '../../shared/shared.module';
 import { PageAddClientComponent } from './page-add-client/page-add-client.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { PageAddClientComponent } from './page-add-client/page-add-client.compon
   imports: [
     CommonModule,
     ClientRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class ClientModule { }
