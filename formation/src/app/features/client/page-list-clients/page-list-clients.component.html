@@ -1,7 +1,15 @@
-<p>page-list-clients works!</p>
-<p>{{ clients | json }}</p>
+<app-btn [btn]="btnFilter" (clicked)="updateState()">
+  <img class="btn-action" src="assets/funnel.svg">
+</app-btn>
 
 
-<app-table-generic [headers]="headers"></app-table-generic>
+<app-table-generic [headers]="headers">
+  <tr *ngFor="let c of clientsFiltred">
+      <td>{{ c.id }}</td>
+      <td>{{ c.name }}</td>
+      <td>{{ c.ca  }}</td>
+      <td>{{ c.state }}</td>
+  </tr>
+</app-table-generic>
 
 <app-btn [btn]="btnAdd"></app-btn>

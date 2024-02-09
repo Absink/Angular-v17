@@ -18,7 +18,7 @@ export class PageListOrdersComponent implements OnInit {
 
   public btnRoute: BtnI = { label: 'Route', route: '1' };
   public btnHref: BtnI = { label: 'Go Ecosia', href: 'https://www.ecosia.org' };
-  public btnAction: BtnI = { label: 'Open console', action: true };
+  public btnAction: BtnI = { label: 'Open console', action: true, color: 'blue' };
 
   constructor(private orderService: OrderService) { }
 
