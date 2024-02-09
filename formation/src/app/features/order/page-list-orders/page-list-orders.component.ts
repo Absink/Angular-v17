@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from '../../../shared/models/order.model';
 import { OrderService } from '../../../shared/services/order.service';
-import { CommonModule } from '@angular/common';
-import { SharedModule } from '../../../shared/shared.module';
 import { BtnI } from '../../../shared/interfaces/btn-i';
 
 @Component({
@@ -16,7 +14,7 @@ export class PageListOrdersComponent implements OnInit {
   public entetes: string [] = [
     'ID', 'Client', 'Jours', 'TJM', 'HT', 'TTC', 'Date', 'Etat'];
 
-  public btnRoute: BtnI = { label: 'Route', route: '1' };
+  public btnRoute: BtnI = { label: 'Add order', route: 'add/new' };
   public btnHref: BtnI = { label: 'Go Ecosia', href: 'https://www.ecosia.org' };
   public btnAction: BtnI = { label: 'Open console', action: true, color: 'blue' };
 

@@ -1,0 +1,35 @@
+<form>
+  <div class="form-group">
+    <label for="type">type</label>
+    <input type="text" class="form-control" id="type" name="type" [(ngModel)]="order.typePresta">
+  </div>
+  <div class="form-group">
+    <label for="client">client</label>
+    <input type="text" class="form-control" id="client" name="client" [(ngModel)]="order.client">
+  </div>
+  <div class="form-group">
+    <label for="nbJours">nbJours</label>
+    <input type="number" class="form-control" id="nbJours" name="nbJours" [(ngModel)]="order.nbJours">
+  </div>
+  <div class="form-group">
+    <label for="tjmHt">tjmHT</label>
+    <input type="number" class="form-control" id="tjmHT" name="tjmHT" [(ngModel)]="order.tjmHT">
+  </div>
+  <div class="form-group">
+    <label for="tva">tva</label>
+    <input type="number" class="form-control" id="tva" name="tva" [(ngModel)]="order.tva">
+  </div>
+  <div class="form-group">
+    <label for="state">state</label>
+    <select class="form-control" id="state" name="state" [(ngModel)]="order.state">
+      <option *ngFor="let s of states" [ngValue]="s">{{ s }}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="comment">comment</label>
+    <textarea class="form-control" id="comment" name="comment" [(ngModel)]="order.comment"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="add()">Envoyer</button>
+
+</form>

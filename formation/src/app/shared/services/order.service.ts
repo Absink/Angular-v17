@@ -32,7 +32,11 @@ export class OrderService {
   public getById(id: number): Observable<Order> {
     return this.http.get<Order>(`${this.api}/orders/${id}`).pipe(
       map(x => new Order(x)));
+  }
 
+  public add(order: Order): Observable<Order> {
+    return this.http.post<Order>(`${this.api}/orders`, order).pipe(
+      map(x => new Order(x)));
   }
 
 }
