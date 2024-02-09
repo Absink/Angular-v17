@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class SharedService {
 
   // static sharedValue: string = "TEST";
-  static isConnected: boolean = true;
+  static isConnected: boolean = false;
 
   constructor() { }
 }

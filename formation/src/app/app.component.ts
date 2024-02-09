@@ -17,7 +17,7 @@ import { Subject } from 'rxjs';
 })
 export class AppComponent implements OnInit {
 
-  public open: boolean = false;
+  public open: boolean = true;
   public msgConnexion: string | undefined;
 
   constructor() { }
