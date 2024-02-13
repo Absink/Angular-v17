@@ -19,5 +19,5 @@
     <input formControlName="tva" type="number" class="form-control" id="tva">
   </div>
 
-  <button type="submit" class="btn btn-primary" (click)="save()">{{ btnName }}</button>
+  <button [disabled]="form.invalid" type="submit" class="btn btn-primary" (click)="save()">{{ btnName }}</button>
 </form>

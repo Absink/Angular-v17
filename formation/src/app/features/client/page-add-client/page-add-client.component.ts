@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from '../../../shared/models/client.model';
 import { StateClient } from '../../../shared/enums/state-client';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ClientService } from '../../../shared/services/client.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SharedService } from '../../../shared/services/shared.service';
 
 @Component({
   selector: 'app-page-add-client',
@@ -40,7 +41,7 @@ export class PageAddClientComponent implements OnInit {
 
   public buildFormGroup(): void {
     this.form = this.formBuilder.group({
-      name: [this.client.name],
+      name: [this.client.name, Validators.required],
       state: [this.client.state],
       ca: [this.client.ca],
       tva: [this.client.tva],
@@ -50,8 +51,12 @@ export class PageAddClientComponent implements OnInit {
   public save(): void {
     if (this.client.id) {
       this.clisentService.update(this.form.value).subscribe(x => {
-        if (x.id)
-          this.router.navigateByUrl('clients')
+        if (x.id) {
+          SharedService.isErrorNotif = false;
+          SharedService.textNotif = `Client ${x.name} bien mis à jour`;
+          this.router.navigateByUrl('clients');
+        }
+
       });
     } else {
       this.clisentService.add(this.form.value).subscribe(x => {

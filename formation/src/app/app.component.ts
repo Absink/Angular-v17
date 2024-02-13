@@ -22,6 +22,14 @@ export class AppComponent implements OnInit {
 
   constructor() { }
 
+  get textNotif(): string {
+    return SharedService.textNotif;
+  }
+
+  get isErrorNotif(): boolean {
+    return SharedService.isErrorNotif;
+  }
+
   ngOnInit(): void {
     this.open = false;
     this.msgConnexion = "Non connecté";
@@ -45,5 +53,9 @@ export class AppComponent implements OnInit {
 
   public switch(): void {
     this.open = !this.open;
+  }
+
+  public exit(): void {
+    SharedService.textNotif = "";
   }
 }

@@ -19,7 +19,7 @@
   <div class="page">
 
     <div class="contents">
-      <p>{{ msgConnexion }}</p>
+      <app-notif *ngIf="textNotif != ''" [text]="textNotif" [isError]="isErrorNotif" (click)="exit()"></app-notif>
       <router-outlet></router-outlet>
     </div>
 

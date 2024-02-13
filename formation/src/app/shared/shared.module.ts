@@ -10,6 +10,7 @@ import { ColorStateDirective } from './directives/color-state.directive';
 import { ColorDaysDirective } from './directives/color-days.directive';
 import { BtnComponent } from './components/btn/btn.component';
 import { RouterModule } from '@angular/router';
+import { NotifComponent } from './components/notif/notif.component';
 
 
 
@@ -23,7 +24,8 @@ import { RouterModule } from '@angular/router';
     DaysPipe,
     ColorStateDirective,
     ColorDaysDirective,
-    BtnComponent
+    BtnComponent,
+    NotifComponent
   ],
   imports: [
     CommonModule, RouterModule
@@ -37,7 +39,8 @@ import { RouterModule } from '@angular/router';
     DaysPipe,
     ColorStateDirective,
     ColorDaysDirective,
-    BtnComponent
+    BtnComponent,
+    NotifComponent
   ]
 })
 export class SharedModule { }
